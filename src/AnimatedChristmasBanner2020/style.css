@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Satisfy', cursive;
+}
+body
+{
+	overflow: hidden;
+}
+section
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #f1f1f1;
+}
+.box
+{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+}
+.box:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right,#000,transparent);
+	z-index: 1;
+	transform-origin: left;
+	transform: rotate(45deg);
+	opacity: 0.1;
+}
+.circle
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg,#fff,#e4e3e8);
+	border-radius: 50%;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.circle:before
+{
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	background: linear-gradient(315deg,#fff,#e4e3e8);
+	border-radius: 50%;
+	z-index: 2;
+}
+.circle h2
+{
+	position: absolute;
+	z-index: 2;
+	font-size: 4em;
+	color: #ff2a2a;
+	text-align: center;
+}
+section i
+{
+	position: absolute;
+	background: #000;
+	border-radius: 100%;
+	background: #ff2a2a;
+	animation: animate linear infinite;
+}
+section i:nth-child(even)
+{
+	background: transparent;
+	border: 1px solid #ff2a2a;
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: translateY(0);
+		opacity: 0;
+	}
+	10%
+	{
+		opacity: 1;
+	}
+	90%
+	{
+		opacity: 1;
+	}
+	100%
+	{
+		transform: translateY(-2000%);
+		opacity: 0;
+	}
+}

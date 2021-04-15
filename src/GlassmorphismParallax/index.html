@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glassmorphism | Mousemove Parallax Effects</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<section>
+		<div class="imgBx">
+			<h2 class="text">Parallax</h2>
+		</div>
+		<div class="box box1"></div>
+		<div class="box box2">
+			<h2 class="text">Parallax</h2>
+		</div>
+	</section>
+	 <script type="text/javascript">
+        var pos = document.documentElement;
+          pos.addEventListener("mousemove", e => {
+          pos.style.setProperty('--x', e.clientX + "px");
+          pos.style.setProperty('--y', e.clientY + "px");
+        });
+    </script>
+</body>
+</html>
