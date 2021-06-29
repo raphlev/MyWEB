@@ -6,7 +6,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body
+
+/*body
 {
     display: flex;
     justify-content: center;
@@ -22,7 +23,15 @@ section
     padding: 50px;
     background: #111;
     max-width: 1620px;
+}*/
+section
+{
+	position: relative;
+	width: 100%;
+	padding: 50px;
+	background: #111;
 }
+
 section h2
 {
     color: #fff;
